@@ -1,0 +1,8 @@
+const app = require('../app');
+const http_port = 80
+
+require('http').createServer(app).listen(http_port, () => {
+    console.log('Listening on port ' + http_port);
+}).on('error',  (e) => {
+    console.log(`http error: ${e.message}`);
+});
